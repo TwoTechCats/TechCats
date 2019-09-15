@@ -13,7 +13,8 @@ public class MineActivate : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-
+        Player = GameObject.Find("Planet");
+        Player_Color = Player.GetComponent<SpriteRenderer>();
         Script = Player.GetComponent<TapToMove>();
         
     }

@@ -7,7 +7,7 @@ using UnityEngine.SceneManagement;
 public class player_Movemen_Village : MonoBehaviour
 {
 
-    Collider2D col;
+    public Collider2D col;
     Collider2D Touched_Col;
     Vector2 touchPosition;
     public int speed = 3;
@@ -24,7 +24,7 @@ public class player_Movemen_Village : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        col.GetComponent<Collider2D>();
+        //col.GetComponent<Collider2D>();
     }
 
     // Update is called once per frame

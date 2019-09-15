@@ -24,4 +24,11 @@ public class Level_Selection : MonoBehaviour
 
     }
 
+    public void Test_Level()
+    {
+
+        SceneManager.LoadScene("Test_Level");
+
+    }
+
 }
