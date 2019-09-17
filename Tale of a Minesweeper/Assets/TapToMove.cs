@@ -24,12 +24,14 @@ public class TapToMove : MonoBehaviour
 
 
     public Animation GameOver_Anim;
+    public GameObject Game_Over;
     public GameObject Restart_Btn;
     public GameObject Quit_Btn;
     public GameObject Back_To_Village_btn;
     Vector2 touchPosition;
 
     public float speed;
+    
 
     // Start is called before the first frame update
     void Start()
