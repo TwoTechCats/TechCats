@@ -8,6 +8,13 @@ public class TapToMove : MonoBehaviour
 
     bool CanMove = false;
     bool Dead = false;
+
+    bool Lounch = false;
+    int x, y;
+    Vector2 Num_x;
+
+
+
     Collider2D col;
     public Collider2D Planet_Collider;
     Collider2D touchedCollider;
@@ -54,23 +61,26 @@ public class TapToMove : MonoBehaviour
 
 
             touchedCollider = Physics2D.OverlapPoint(touchPosition);
-            
 
-
-
-            CanMove = true;
-            Planet_Collider.enabled = false;
-
+            if (touchedCollider != null)
+            {
+                CanMove = true;
+                Planet_Collider.enabled = false;
+            }
         }
         
         if(CanMove == true && Dead == false)
         {
 
             //transform.position = Vector2.MoveTowards(transform.position, touchPosition, speed * Time.deltaTime);
-            MoveTO = touchedCollider.transform.position;
-            transform.position = Vector2.MoveTowards(transform.position, MoveTO, speed * Time.deltaTime);
             
+            if (touchedCollider.tag == "Move_Point" || touchedCollider.tag == "Mines")
+            {
+                    MoveTO = touchedCollider.transform.position;
+                    transform.position = Vector2.MoveTowards(transform.position, MoveTO, speed * Time.deltaTime);
 
+            }
+                        
         }
 
         if((Vector2)transform.position == MoveTO )
@@ -82,6 +92,12 @@ public class TapToMove : MonoBehaviour
 
         }
 
+        if (Lounch)
+        {
+
+            transform.position = Vector2.MoveTowards(transform.position, Num_x, 15 * Time.deltaTime);
+
+        }
        
         
 
@@ -99,11 +115,7 @@ public class TapToMove : MonoBehaviour
             Dead = true;
             Player_Color.color = new Color(0.5f, 0, 0);
 
-            int x = Random.Range(-2, 2);
-
-            Vector2 Num_x = new Vector2(transform.position.x + x, transform.position.y + x);
-
-            transform.position = Vector2.MoveTowards(transform.position, Num_x, 5 );
+            Lounch_Player();
 
             Invoke("End", 2.5f);
 
@@ -170,6 +182,18 @@ public class TapToMove : MonoBehaviour
         Restart_Btn.SetActive(true);
         Quit_Btn.SetActive(true);
         Back_To_Village_btn.SetActive(true);
+
+    }
+
+    private void Lounch_Player()
+    {
+
+        x = Random.Range(-2, 2);
+        y = Random.Range(-2, 2);
+
+        Num_x = new Vector2(transform.position.x + x, transform.position.y + y);
+
+        Lounch = true;
 
     }
 

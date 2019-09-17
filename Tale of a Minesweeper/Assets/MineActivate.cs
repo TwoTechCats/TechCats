@@ -11,6 +11,7 @@ public class MineActivate : MonoBehaviour
     private TapToMove Script;
 
     public Animator anim;
+    private bool Active = false;
 
     // Start is called before the first frame update
     void Start()
@@ -25,20 +26,34 @@ public class MineActivate : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+
+       
+
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
+        
 
-        if (collision.tag == "Planet")
+      
+
+        
+
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+
+        if (collision.transform.tag == "Planet")
         {
-           Sprite.color = new Color(1, 1, 1, 1);
+
+            Sprite.color = new Color(1, 1, 1, 1);
 
             Play_Anim();
             //Player_Color.color = new Color(0.5f, 0, 0);
 
             Script.Death();
+
         }
 
     }
