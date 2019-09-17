@@ -21,7 +21,7 @@ public class Level_Manager : MonoBehaviour
     void Start()
     {
 
-        
+       
 
     }
 
@@ -41,7 +41,7 @@ public class Level_Manager : MonoBehaviour
             Spawn_Mines = Spawn_Mines + 1;
 
         }
-
+        
         if(Spawn_Safe < Spawn_Points.Length)
         {
 
@@ -57,6 +57,6 @@ public class Level_Manager : MonoBehaviour
 
         }
 
-
+    
     }
 }

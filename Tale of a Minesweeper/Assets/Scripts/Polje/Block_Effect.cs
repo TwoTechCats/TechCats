@@ -7,13 +7,12 @@ public class Block_Effect : MonoBehaviour
     public SpriteRenderer Block;
 
     Collider2D col;
+   
 
     // Start is called before the first frame update
     void Start()
     {
         
-
-
     }
 
     // Update is called once per frame
@@ -22,12 +21,7 @@ public class Block_Effect : MonoBehaviour
 
         col = Physics2D.OverlapPoint(transform.position);
 
-        if(col.tag == "Mines")
-        {
-
-            Mine();
-
-        }
+       
 
     }
 
@@ -36,6 +30,7 @@ public class Block_Effect : MonoBehaviour
         if (collision.tag == "Planet")
         {
             Block.color = new Color(0, 1, 0, 0);
+            
         }
     }
 
@@ -45,5 +40,7 @@ public class Block_Effect : MonoBehaviour
         Block.color = Color.red;
 
     }
+
+   
 
 }
