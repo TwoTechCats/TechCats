@@ -138,6 +138,7 @@ MonoBehaviour:
   Player_Color: {fileID: 1752727478998690329}
   Damage_Effect: {fileID: 0}
   GameOver_Anim: {fileID: 0}
+  Game_Over: {fileID: 0}
   Restart_Btn: {fileID: 0}
   Quit_Btn: {fileID: 0}
   Back_To_Village_btn: {fileID: 0}

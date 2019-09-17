@@ -11,6 +11,7 @@ TagManager:
   - Travar
   - Level
   - MainMenu
+  - GameOver
   layers:
   - Default
   - TransparentFX
