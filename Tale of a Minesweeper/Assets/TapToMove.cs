@@ -115,7 +115,7 @@ public class TapToMove : MonoBehaviour
             Dead = true;
             Player_Color.color = new Color(0.5f, 0, 0);
 
-            Lounch_Player();
+            Invoke("Lounch_Player", 1.2f);
 
             Invoke("End", 2.5f);
 
