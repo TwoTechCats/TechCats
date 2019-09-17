@@ -82,6 +82,7 @@ public class TapToMove : MonoBehaviour
 
         }
 
+       
         
 
     }
@@ -97,10 +98,14 @@ public class TapToMove : MonoBehaviour
         {
             Dead = true;
             Player_Color.color = new Color(0.5f, 0, 0);
-            GameOver_Anim.Play();
-            Restart_Btn.SetActive(true);
-            Quit_Btn.SetActive(true);
-            Back_To_Village_btn.SetActive(true);
+
+            int x = Random.Range(-2, 2);
+
+            Vector2 Num_x = new Vector2(transform.position.x + x, transform.position.y + x);
+
+            transform.position = Vector2.MoveTowards(transform.position, Num_x, 5 );
+
+            Invoke("End", 2.5f);
 
         }
     }
@@ -154,6 +159,17 @@ public class TapToMove : MonoBehaviour
     {
 
         Damage_Effect.SetActive(false);
+
+    }
+
+    private void End()
+    {
+
+        
+        GameOver_Anim.Play();
+        Restart_Btn.SetActive(true);
+        Quit_Btn.SetActive(true);
+        Back_To_Village_btn.SetActive(true);
 
     }
 

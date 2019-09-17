@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 1950805574653274649}
   - component: {fileID: 8963431400400172516}
   - component: {fileID: 8963431400400172515}
+  - component: {fileID: 7176385511788358088}
   m_Layer: 0
   m_Name: Mine
   m_TagString: Mines
@@ -130,7 +131,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0.00096622296}
+  m_Offset: {x: 0, y: 0.0009662062}
   m_SpriteTilingProperty:
     border: {x: 0.049999997, y: 0.049999997, z: 0.049999997, w: 0.049999997}
     pivot: {x: 0.5, y: 0.5}
@@ -141,7 +142,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.107213855, y: 0.107213855}
+  m_Size: {x: 0.14043282, y: 0.1404328}
   m_EdgeRadius: 0
 --- !u!114 &8963431400400172515
 MonoBehaviour:
@@ -158,3 +159,23 @@ MonoBehaviour:
   Sprite: {fileID: 7988874937860020081}
   Player_Color: {fileID: 0}
   Player: {fileID: 0}
+  anim: {fileID: 7176385511788358088}
+--- !u!95 &7176385511788358088
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8963431400400172514}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 6227b1e670582504faa66475fd0ccb4b, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
