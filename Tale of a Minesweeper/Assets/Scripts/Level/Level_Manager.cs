@@ -18,22 +18,26 @@ public class Level_Manager : MonoBehaviour
     int RandomNumber;
 
     Vector2 Spawn_Location;
+    Collider2D Test;
     Collider2D Col;
     Collider2D Col_1;
     Collider2D Col_2;
 
     GameObject Object_1;
     GameObject Object_2;
+    public GameObject Start_Panel;
 
     bool Set_Mines = false;
     bool Mines_Placed = false;
     bool Count_Start = false;
+    bool Number_Set = false;
+   
 
     // Start is called before the first frame update
     void Start()
     {
 
-       
+        Invoke("Panel", 5f);
 
     }
 
@@ -42,15 +46,24 @@ public class Level_Manager : MonoBehaviour
     {
         
 
-        if(Set_Mines && Spawn_Mines < Mine_Number)
+        if(Spawn_Mines < Mine_Number)
         {
 
             RandomNumber = Random.Range(0, Spawn_Points.Length);
+
+            Test = Physics2D.OverlapPoint(Spawn_Points[RandomNumber].transform.position);
+
+            if(Test == null)
+            {
+
             Spawn_Location = Spawn_Points[RandomNumber].transform.position;
 
             Instantiate(Mine, Spawn_Location, transform.rotation);
 
             Spawn_Mines = Spawn_Mines + 1;
+
+            }
+            
 
         }
 
@@ -61,21 +74,15 @@ public class Level_Manager : MonoBehaviour
 
         }
         
-        if(Spawn_Safe < Spawn_Points.Length)
+        if(Spawn_Safe < Spawn_Points.Length && Number_Set == true)
         {
 
             Instantiate(Safe_Place, Spawn_Points[Spawn_Safe].transform.position, transform.rotation);
             Spawn_Safe = Spawn_Safe + 1;
+            
 
         }
-
-        if(Spawn_Safe == Spawn_Points.Length)
-        {
-
-            Set_Mines = true;
-
-        }
-
+        
         if(Mines_Placed == true && Count_Start == false)
         {
             Mines_Placed = false;
@@ -83,7 +90,10 @@ public class Level_Manager : MonoBehaviour
 
             for (int i = 0; i < Spawn_Points.Length; i++)
             {
-                
+                if( i == Spawn_Points.Length - 1)
+                {
+                    Number_Set = true;
+                }
 
                 Col = Physics2D.OverlapPoint(Spawn_Points[i].transform.position);
 
@@ -95,69 +105,42 @@ public class Level_Manager : MonoBehaviour
 
                         Instantiate(Danger_Number_3, Spawn_Points[i].transform.position, transform.rotation);
 
-                        if (Object_1 != null)
-                        {
-                            Destroy(this.Object_1);
-                        }
-                        if (Object_2 != null)
-                        {
-                            Destroy(this.Object_2);
-                        }
+                        
                         
                     }
-                    
-
-                    if (Col.tag != "Mines")
-                    {
-
-                        Col_1 = Physics2D.OverlapCircle(Spawn_Points[i].transform.position, 1.2f);
 
 
-                        if(Col_1 != null)
-                        {
-
-                            if (Col_1.tag == "Mines")
-                            {
-
-                                Object_2 = Instantiate(Danger_Number_2, Spawn_Points[i].transform.position, transform.rotation);
-                                if (Object_1 != null)
-                                {
-                                    Destroy(this.Object_1);
-                                }
-                            }
-                            
-                            if (Col_1.tag != "Mines")
-                            {
-
-                                Col_2 = Physics2D.OverlapCircle(Spawn_Points[i].transform.position, 2.7f);
-
-                                if(Col_2 != null)
-                                {
-
-                                    if (Col_2.tag == "Mines")
-                                    {
-
-                                        Object_1 = Instantiate(Danger_Number_1, Spawn_Points[i].transform.position, transform.rotation);
-
-
-                                    }
-
-                                }
-
-
-                            }
-                            
-                        }
-
-
-                    }
-
-
-                   
 
                 }
 
-                
+                if(Col == null)
+                {
+
+                    Col_1 = Physics2D.OverlapCircle(Spawn_Points[i].transform.position, 1.2f);
+
+                    if (Col_1 != null)
+                    {
+
+                        if (Col_1.tag == "Mines")
+                        {
+
+                            Instantiate(Danger_Number_2, Spawn_Points[i].transform.position, transform.rotation);
+
+                        }
+
+
+
+                    }
+
+                    if(Col_1 == null)
+                    {
+
+                        Instantiate(Danger_Number_1, Spawn_Points[i].transform.position, transform.rotation);
+
+
+                    }
+
+                }
 
 
             }
@@ -165,5 +148,12 @@ public class Level_Manager : MonoBehaviour
         }
 
     
+    }
+
+    private void Panel()
+    {
+
+        Start_Panel.SetActive(false);
+
     }
 }

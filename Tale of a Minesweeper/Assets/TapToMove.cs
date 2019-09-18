@@ -8,6 +8,7 @@ public class TapToMove : MonoBehaviour
 
     bool CanMove = false;
     bool Dead = false;
+    bool Start_Game = false;
 
     bool Lounch = false;
     int x, y;
@@ -46,6 +47,7 @@ public class TapToMove : MonoBehaviour
 
         col = GetComponent<Collider2D>();
         Damage();
+        Invoke("Beguin_Movement", 2.5f);
 
     }
 
@@ -53,7 +55,7 @@ public class TapToMove : MonoBehaviour
     void Update()
     {
 
-        if (CanMove == false && Input.touchCount > 0 && Dead == false)
+        if (Start_Game == true && CanMove == false && Input.touchCount > 0 && Dead == false)
         {
 
             Touch touch = Input.GetTouch(0);
@@ -195,6 +197,11 @@ public class TapToMove : MonoBehaviour
 
         Lounch = true;
 
+    }
+
+    private void Beguin_Movement()
+    {
+        Start_Game = true;
     }
 
 }
