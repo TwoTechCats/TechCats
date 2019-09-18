@@ -7,6 +7,7 @@ TextureImporter:
     21300004: Tale_Me_OciZatvorene
     21300006: kapija preko
     21300008: kapija dole
+    21300010: Me_Rep
   externalObjects: {}
   serializedVersion: 9
   mipmaps:
@@ -103,12 +104,12 @@ TextureImporter:
       name: Tale_Me_Telo
       rect:
         serializedVersion: 2
-        x: 421
+        x: 429
         y: 0
-        width: 603
-        height: 848
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        width: 595
+        height: 851
+      alignment: 9
+      pivot: {x: 0.4932773, y: 0.49823737}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -123,12 +124,12 @@ TextureImporter:
       name: Tale_Me_Kosa
       rect:
         serializedVersion: 2
-        x: 5
-        y: 772
-        width: 266
-        height: 246
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        x: 1
+        y: 767
+        width: 267
+        height: 256
+      alignment: 9
+      pivot: {x: 0.5131086, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -168,7 +169,7 @@ TextureImporter:
         width: 310
         height: 167
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -188,13 +189,33 @@ TextureImporter:
         width: 278
         height: 161
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
       spriteID: 8a8ac150a11e87d42a35a6c05239f6ba
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Me_Rep
+      rect:
+        serializedVersion: 2
+        x: 312
+        y: 10
+        width: 164
+        height: 583
+      alignment: 9
+      pivot: {x: 0.5243902, y: 0.4948542}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 07a229d170b13194d88cba3a1e32b5bc
       vertices: []
       indices: 
       edges: []
@@ -210,6 +231,6 @@ TextureImporter:
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
-  userData: 
+  userData: 637044245884999170
   assetBundleName: 
   assetBundleVariant: 
