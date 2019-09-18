@@ -5,6 +5,8 @@ TextureImporter:
     21300000: Tale_Me_Telo
     21300002: Tale_Me_Kosa
     21300004: Tale_Me_OciZatvorene
+    21300006: kapija preko
+    21300008: kapija dole
   externalObjects: {}
   serializedVersion: 9
   mipmaps:
@@ -106,7 +108,7 @@ TextureImporter:
         width: 603
         height: 848
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -126,7 +128,7 @@ TextureImporter:
         width: 266
         height: 246
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -146,13 +148,53 @@ TextureImporter:
         width: 178
         height: 38
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
       spriteID: 3f481794ec8bb0e4f8c884dd5dc7b1ec
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kapija preko
+      rect:
+        serializedVersion: 2
+        x: 7
+        y: 594
+        width: 310
+        height: 167
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bc59a2b4137bcd64a8f58d82d6fb3220
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kapija dole
+      rect:
+        serializedVersion: 2
+        x: 19
+        y: 430
+        width: 278
+        height: 161
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8a8ac150a11e87d42a35a6c05239f6ba
       vertices: []
       indices: 
       edges: []

@@ -12,6 +12,8 @@ TagManager:
   - Level
   - MainMenu
   - GameOver
+  - Deda_Narator
+  - Danger_Number
   layers:
   - Default
   - TransparentFX

@@ -84,6 +84,15 @@ public class player_Movemen_Village : MonoBehaviour
 
         }
 
+        if(collision.tag == "Deda_Narator")
+        {
+
+            Title.SetActive(true);
+            Naziv.text = "Deda Narator";
+            
+            
+        }
+
         if(collision.tag == "Level")
         {
 
