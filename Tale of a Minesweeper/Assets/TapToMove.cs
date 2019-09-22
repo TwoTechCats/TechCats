@@ -32,13 +32,17 @@ public class TapToMove : MonoBehaviour
 
 
     public Animation GameOver_Anim;
-    public GameObject Game_Over;
     public GameObject Restart_Btn;
     public GameObject Quit_Btn;
     public GameObject Back_To_Village_btn;
     Vector2 touchPosition;
 
     public float speed;
+    private bool Seting_falg = false;
+    public GameObject Flag;
+    private Touch touch;
+    private Vector2 Flag_Position;
+    private Collider2D Flag_Col;
     
 
     // Start is called before the first frame update
@@ -54,6 +58,7 @@ public class TapToMove : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        
 
         if (Start_Game == true && CanMove == false && Input.touchCount > 0 && Dead == false)
         {
@@ -100,7 +105,18 @@ public class TapToMove : MonoBehaviour
             transform.position = Vector2.MoveTowards(transform.position, Num_x, 15 * Time.deltaTime);
 
         }
-       
+
+        if(Seting_falg == true && Input.touchCount > 0)
+        {
+
+            touch = Input.GetTouch(0);
+            Flag_Position = Camera.main.ScreenToWorldPoint(touch.position);
+            Flag_Col = Physics2D.OverlapPoint(Flag_Position);
+
+            Spawn_Flag();
+            Seting_falg = false;
+
+        }
         
 
     }
@@ -202,6 +218,38 @@ public class TapToMove : MonoBehaviour
     private void Beguin_Movement()
     {
         Start_Game = true;
+    }
+
+    public void Set_Flag()
+    {
+
+        Invoke("Flag_Btn", .5f);
+
+    }
+
+    private void Spawn_Flag()
+    {
+
+        Instantiate(Flag, Flag_Col.transform.position, transform.rotation);
+        Invoke("Flage_Btn_Off", 0.5f);
+
+    }
+
+    private void Flag_Btn()
+    {
+
+        Seting_falg = true;
+        CanMove = true;
+        Dead = true;
+
+    }
+
+    private void Flage_Btn_Off()
+    {
+
+        CanMove = false;
+        Dead = false;
+
     }
 
 }

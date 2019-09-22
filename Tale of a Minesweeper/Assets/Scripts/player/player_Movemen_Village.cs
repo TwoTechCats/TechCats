@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using UnityEngine.AI;
 
 public class player_Movemen_Village : MonoBehaviour
 {
@@ -12,6 +13,7 @@ public class player_Movemen_Village : MonoBehaviour
     Vector2 touchPosition;
     public int speed = 3;
     public GameObject Player;
+    
 
     bool Movement = true;
     bool Can_Move = false;
@@ -38,6 +40,7 @@ public class player_Movemen_Village : MonoBehaviour
             touchPosition = Camera.main.ScreenToWorldPoint(touch.position);
             Touched_Col = Physics2D.OverlapPoint(touchPosition);
 
+            
             Can_Move = true;
 
             //transform.position = Vector2.MoveTowards(transform.position, touchPosition, speed * Time.deltaTime);
