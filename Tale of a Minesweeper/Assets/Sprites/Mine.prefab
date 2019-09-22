@@ -131,8 +131,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Sprite: {fileID: 7988874937860020081}
-  Player_Color: {fileID: 0}
-  Player: {fileID: 0}
+  Player_Color: {fileID: 1752727478998690329, guid: 1cc9379bbdee347459ab1155965b5f0d,
+    type: 3}
+  Player: {fileID: 1566790296104847462, guid: 1cc9379bbdee347459ab1155965b5f0d, type: 3}
   anim: {fileID: 7176385511788358088}
 --- !u!95 &7176385511788358088
 Animator:
