@@ -54,3 +54,6 @@ TagManager:
   - name: Me_idle
     uniqueID: 1060859329
     locked: 0
+  - name: Me_front_walk
+    uniqueID: 3290536911
+    locked: 0

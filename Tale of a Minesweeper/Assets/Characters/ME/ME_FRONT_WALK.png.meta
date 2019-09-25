@@ -1,7 +1,15 @@
 fileFormatVersion: 2
 guid: 0acc43819aa2c6b42affb2a63b87b25f
 TextureImporter:
-  fileIDToRecycleName: {}
+  fileIDToRecycleName:
+    21300000: Me_front_walk_kaput
+    21300002: Me_front_walk_nogaD
+    21300004: Me_front_walk_CizmaD
+    21300006: Me_front_walk_RukavD
+    21300008: Me_front_walk_cizmaL
+    21300010: Me_front_walk_nogaL
+    21300012: Me_front_walk_RukavL
+    21300014: Me_front_walk_CizmaPodinut
   externalObjects: {}
   serializedVersion: 9
   mipmaps:
@@ -40,7 +48,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -60,7 +68,29 @@ TextureImporter:
   platformSettings:
   - serializedVersion: 2
     buildTarget: DefaultTexturePlatform
-    maxTextureSize: 2048
+    maxTextureSize: 1024
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  - serializedVersion: 2
+    buildTarget: Standalone
+    maxTextureSize: 1024
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  - serializedVersion: 2
+    buildTarget: Android
+    maxTextureSize: 1024
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 1
@@ -71,7 +101,167 @@ TextureImporter:
     androidETC2FallbackOverride: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: Me_front_walk_kaput
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 352
+        width: 422
+        height: 672
+      alignment: 9
+      pivot: {x: 0.5023697, y: 0.4947917}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7f0daa980751e1e48809952a8850dc8e
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Me_front_walk_nogaD
+      rect:
+        serializedVersion: 2
+        x: 827
+        y: 340
+        width: 197
+        height: 684
+      alignment: 9
+      pivot: {x: 0.5177665, y: 0.50438595}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2047be73358f01f449c9a2798587aa72
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Me_front_walk_CizmaD
+      rect:
+        serializedVersion: 2
+        x: 599
+        y: 822
+        width: 247
+        height: 131
+      alignment: 9
+      pivot: {x: 0.49392715, y: 0.48091602}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e4e69da408891844b8a7c1dead1fcd9c
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Me_front_walk_RukavD
+      rect:
+        serializedVersion: 2
+        x: 441
+        y: 918
+        width: 399
+        height: 106
+      alignment: 9
+      pivot: {x: 0.49498746, y: 0.514151}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bf347805ffbe39548b3b768c15fc83a6
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Me_front_walk_cizmaL
+      rect:
+        serializedVersion: 2
+        x: 599
+        y: 822
+        width: 247.00006
+        height: 131.78851
+      alignment: 9
+      pivot: {x: 0.49392703, y: 0.47803864}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 99b679aa48d23cd49aa454d2c09d467f
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Me_front_walk_nogaL
+      rect:
+        serializedVersion: 2
+        x: 832
+        y: 340
+        width: 192
+        height: 684
+      alignment: 9
+      pivot: {x: 0.5052084, y: 0.50438595}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 60cd9f982d3e2864e9e3cdc1feaa4f99
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Me_front_walk_RukavL
+      rect:
+        serializedVersion: 2
+        x: 441
+        y: 915.8771
+        width: 399
+        height: 108.122925
+      alignment: 9
+      pivot: {x: 0.49498746, y: 0.5236903}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5394a96a7d3b06e489563707568ffd95
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Me_front_walk_CizmaPodinut
+      rect:
+        serializedVersion: 2
+        x: 365
+        y: 750
+        width: 171
+        height: 246
+      alignment: 9
+      pivot: {x: 0.5146199, y: 0.50609756}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e6695867a8fbe5248b5f3c34d4a2aeca
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -83,6 +273,6 @@ TextureImporter:
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
-  userData: 
+  userData: 637050349385921900
   assetBundleName: 
   assetBundleVariant: 
